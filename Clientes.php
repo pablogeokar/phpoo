@@ -1,5 +1,7 @@
 <?php
 
+
+
 class Clientes
 {
     private $codigo;
