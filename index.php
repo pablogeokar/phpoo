@@ -12,11 +12,13 @@ $relacaoClientes = array(
     ['nome'=> "jesus", 'cpf'=>"123456789101", 'cidade'=>"Feira de Santana/BA", 'endereco'=>"Endereco A"],
     ['nome'=> "Tonhao", 'cpf'=>"123456789101", 'cidade'=>"Feira de Santana/BA", 'endereco'=>"Endereco A"]
 );
+$cod = 1;
 
 foreach ($relacaoClientes as $cliente){
+    $cod = $cod++;
     $nome = $cliente['nome'];
     $cpf = $cliente['cpf'];
     $cidade = $cliente['cidade'];
     $endereco = $cliente['endereco'];
-    echo "<a href='cliente-info.php?nome=$nome&cpf=$cpf&cidade=$cidade&endereco=$endereco'>$nome</a></br>";
+    echo "<a href='cliente-info.php?cod=$cod&nome=$nome&cpf=$cpf&cidade=$cidade&endereco=$endereco'>$nome</a></br>";
 }
