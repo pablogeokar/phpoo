@@ -1,5 +1,4 @@
 <?php
-require_once "Clientes.php";
 
 $relacaoClientes = array(
     ['nome'=> "Pablo George", 'cpf'=>"123456789101", 'cidade'=>"Feira de Santana/BA", 'endereco'=>"Endereco A"],
@@ -15,5 +14,9 @@ $relacaoClientes = array(
 );
 
 foreach ($relacaoClientes as $cliente){
-    echo '<a href="#">'.$cliente['nome']."</a></br >";
+    $nome = $cliente['nome'];
+    $cpf = $cliente['cpf'];
+    $cidade = $cliente['cidade'];
+    $endereco = $cliente['endereco'];
+    echo "<a href='cliente-info.php?nome=$nome&cpf=$cpf&cidade=$cidade&endereco=$endereco'>$nome</a></br>";
 }
